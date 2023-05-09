@@ -1,0 +1,1 @@
+# script_kafka_mass
