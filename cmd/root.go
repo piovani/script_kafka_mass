@@ -3,6 +3,7 @@ package cmd
 import (
 	"log"
 
+	"github.com/piovani/script_kafka_mass/infra/config"
 	"github.com/spf13/cobra"
 )
 
@@ -17,6 +18,7 @@ func Execute() {
 		ConsumerCMD,
 	)
 
+	CheckFatal(config.InitConfig())
 	CheckFatal(cmd.Execute())
 }
 
